@@ -16,7 +16,6 @@ function removetablerow()
     {
         document.getElementById("tbl1").deleteRow(numInputs);
     }
-    
 }
 
 function addtablerow()
@@ -52,7 +51,6 @@ function addtablerow()
     var pctp = document.createElement("p");
     pctp.id = "pc" + (numInputs + 1);
     pctCell.appendChild(pctp);
-    
 }
 
 function chgAbbrev(fieldid) {
@@ -68,9 +66,13 @@ function chgAbbrev(fieldid) {
 function clearValues()
 {
     var numInputs = document.getElementsByTagName("input").length / 2;
-    
+    //fields to clear are gr1 and tot1
     for (var i = 1; i < numInputs + 1; i++)
     {
+        document.getElementById('gr' + i).value = "";
+        document.getElementById('gr' + i).innerHTML = "";
+        document.getElementById('tot' + i).value = "";
+        document.getElementById('tot' + i).innerHTML = "";
         document.getElementById('pc' + i).value = "";
         document.getElementById('pc' + i).innerHTML = "";
     }
